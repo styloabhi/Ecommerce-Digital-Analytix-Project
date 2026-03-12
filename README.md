@@ -1,257 +1,247 @@
-📊 Digital Analytics Project – E-Commerce Business Intelligence Dashboard
-<p align="center"> <img src="assets/preview.png" width="900"> </p>
+# 📊 Digital Analytics Project – E-Commerce Business Intelligence Dashboard
 
-This project builds a Business Intelligence and Digital Analytics Dashboard for a newly launched e-commerce startup selling stuffed animal toys.
+<p align="center">
+<img src="assets/preview.png" width="900">
+</p>
 
-The objective is to analyze website traffic, marketing performance, product sales, and customer behavior to help stakeholders make data-driven decisions and support the company’s next round of funding.
+📊 **Business Intelligence | Digital Analytics | E-commerce Growth Strategy**
 
-🚀 Business Context
+This project builds a **Business Intelligence and Digital Analytics Dashboard** for a newly launched **e-commerce startup selling stuffed animal toys**.
 
-The company’s CEO wants to present a data-driven growth story to investors.
+The objective is to analyze **website traffic, marketing performance, product sales, and customer behavior** to help stakeholders make **data-driven decisions** and support the company’s **next round of funding**.
+
+---
+
+## 🌐 Live Dashboard
+
+Access the deployed Streamlit application:
+
+https://digital-analytix-project-bbuacqvxz9vub7rahbt7lr.streamlit.app/
+
+---
+
+## 🚀 Business Context
+
+The company’s CEO wants to present a **data-driven growth story to investors**.
 
 To support this, the analytics team built dashboards and analytical reports for multiple stakeholders.
 
-Stakeholders
+### Stakeholders
 
-Cindy Sharp — CEO
+- Cindy Sharp — CEO
+- Morgan Rockwell — Website Manager
+- Tom Parmesan — Marketing Manager
 
-Morgan Rockwell — Website Manager
+Each stakeholder requires **different KPIs and analytical insights**.
 
-Tom Parmesan — Marketing Manager
+---
 
-Each stakeholder requires different KPIs and analytical insights.
-
-🎯 Project Objectives
+## 🎯 Project Objectives
 
 The analytics team is responsible for:
 
-Building stakeholder dashboards
+- Building stakeholder dashboards
+- Tracking key business KPIs
+- Performing deep performance analysis
+- Generating investor-ready insights
 
-Tracking key business KPIs
+### Key Analytical Areas
 
-Performing deep performance analysis
+- Traffic analysis
+- Website performance
+- Product performance
+- Cross-sell analysis
+- Marketing channel analysis
+- Customer behavior insights
 
-Generating investor-ready insights
+---
 
-Key analytical areas include:
+## 👔 Stakeholder Dashboards
 
-Traffic analysis
+### CEO Dashboard
 
-Website performance
+Focus: **Business Performance & Growth**
 
-Product performance
+#### KPIs
 
-Cross-sell analysis
+- Revenue
+- Profit
+- Profit Margin
+- Average Order Value
+- Refund Rate
+- Revenue Growth
 
-Marketing channel analysis
+#### Key Analyses
 
-Customer behavior insights
+- Product level sales
+- Product launch performance
+- Cross-sell analysis
+- Portfolio expansion analysis
+- Product refund analysis
+- Traffic sources and seasonality
 
-👔 Stakeholder Dashboards
-CEO Dashboard
+---
 
-Focus: Business Performance & Growth
+### 🌐 Website Manager Dashboard
 
-KPIs:
+Focus: **Website Performance & Conversion Optimization**
 
-Revenue
+#### KPIs
 
-Profit
+- Top website pages
+- Entry pages
+- Bounce rate
+- Conversion rate
+- Revenue per session
+- Session trends
 
-Profit Margin
+#### Key Analyses
 
-Average Order Value
+- Landing page performance
+- Conversion funnel analysis
+- A/B testing for billing pages
+- Product pathing analysis
+- Website traffic trends
 
-Refund Rate
+---
 
-Revenue Growth
+### 📣 Marketing Manager Dashboard
 
-Key analyses:
+Focus: **Marketing Channel Performance**
 
-Product level sales
+#### KPIs
 
-Product launch performance
+- Gsearch conversion rate
+- Traffic volume trends
+- Repeat visitors
+- Repeat session rate
 
-Cross-sell analysis
+#### Key Analyses
 
-Portfolio expansion analysis
+- Traffic source trends
+- Channel performance comparison
+- Marketing bid optimization
+- Repeat visitor behavior analysis
 
-Product refund analysis
+---
 
-Traffic sources and seasonality
+## 🗄 Dataset Description
 
-🌐 Website Manager Dashboard
+The project uses an **E-commerce database with multiple related tables**.
 
-Focus: Website Performance & Conversion Optimization
+| Dataset | Description |
+|------|------|
+| orders.parquet | Order level data including revenue, cost, and product purchased |
+| order_items.parquet | Individual product items within orders |
+| order_item_refunds.parquet | Refund details for returned items |
+| products.parquet | Product catalog information |
+| website_sessions.parquet | Website traffic source data |
+| website_pageviews.parquet | Page level website activity |
 
-KPIs:
+---
 
-Top website pages
+## 📊 Key Analytics Performed
 
-Entry pages
+### Traffic Analysis
 
-Bounce rate
+- Source breakdown
+- Device analysis
+- Channel performance
 
-Conversion rate
+### Conversion Analysis
 
-Revenue per session
+- Conversion funnels
+- Landing page testing
+- Checkout performance
 
-Session trends
+### Product Analysis
 
-Key analyses:
+- Product level revenue
+- Product launch performance
+- Cross-sell performance
 
-Landing page performance
+### Customer Analysis
 
-Conversion funnel analysis
+- Repeat visitors
+- Session patterns
+- Purchase behavior
 
-A/B testing for billing pages
+---
 
-Product pathing analysis
+## 📓 Deep Analysis Notebook
 
-Website traffic trends
+A detailed **Jupyter notebook analysis** was performed to generate insights used in the **investor pitch deck and dashboards**.
 
-📣 Marketing Manager Dashboard
+### Notebook includes
 
-Focus: Marketing Channel Performance
+- Exploratory Data Analysis (EDA)
+- Traffic and marketing analysis
+- Funnel conversion analysis
+- Product performance analysis
+- Cross-sell and bundling insights
+- Experimentation and A/B testing insights
 
-KPIs:
+Notebook path:
 
-Gsearch conversion rate
-
-Traffic volume trends
-
-Repeat visitors
-
-Repeat session rate
-
-Key analyses:
-
-Traffic source trends
-
-Channel performance comparison
-
-Marketing bid optimization
-
-Repeat visitor behavior analysis
-
-📊 Dashboard Preview
-
-The interactive dashboard allows stakeholders to monitor performance and explore insights in real time.
-
-<p align="center"> <img src="assets/preview.png" width="900"> </p>
-🗄 Dataset Description
-
-The project uses an E-commerce database with multiple related tables.
-
-Dataset	Description
-orders.parquet	Order level data including revenue, cost, and product purchased
-order_items.parquet	Individual product items within orders
-order_item_refunds.parquet	Refund details for returned items
-products.parquet	Product catalog information
-website_sessions.parquet	Website traffic source data
-website_pageviews.parquet	Page level website activity
-📊 Key Analytics Performed
-Traffic Analysis
-
-Source breakdown
-
-Device analysis
-
-Channel performance
-
-Conversion Analysis
-
-Conversion funnels
-
-Landing page testing
-
-Checkout performance
-
-Product Analysis
-
-Product level revenue
-
-Product launch performance
-
-Cross-sell performance
-
-Customer Analysis
-
-Repeat visitors
-
-Session patterns
-
-Purchase behavior
-
-📓 Deep Analysis Notebook
-
-A detailed Jupyter notebook analysis was performed to generate insights used in the investor pitch deck and dashboards.
-
-The notebook includes:
-
-Exploratory Data Analysis (EDA)
-
-Traffic and marketing analysis
-
-Funnel conversion analysis
-
-Product performance analysis
-
-Cross-sell and bundling insights
-
-Experimentation and A/B testing insights
-
-📓 Notebook
 analysis/pitch_deck_analysis.ipynb
 
-📊 Investor Pitch Deck
 
-The project includes an investor-ready pitch deck presenting the business growth story and strategic insights derived from the analysis.
 
-Key topics covered:
+---
 
-Revenue and order growth trends
+## 📊 Investor Pitch Deck
 
-Customer acquisition performance
+The project includes an **investor-ready pitch deck** presenting the business growth story and strategic insights derived from the analysis.
 
-Product portfolio expansion
+### Topics covered
 
-Cross-sell opportunities
+- Revenue and order growth trends
+- Customer acquisition performance
+- Product portfolio expansion
+- Cross-sell opportunities
+- Marketing efficiency
+- Investment opportunities
 
-Marketing efficiency
+Pitch deck path:
 
-Investment opportunities
-
-📄 Pitch Deck
 assets/pitch_deck.pdf
 
-📋 Project Management (JIRA)
+---
 
-Project development followed an Agile workflow managed using JIRA.
+## 📋 Project Management (JIRA)
 
-Activities included:
+Project development followed an **Agile workflow managed using JIRA**.
 
-Sprint planning
+### Activities included
 
-Task assignment and tracking
+- Sprint planning
+- Task assignment and tracking
+- Team coordination
+- Progress monitoring
 
-Team coordination
-
-Progress monitoring
-
-JIRA task tracking file:
+JIRA file:
 
 docs/jira_details.csv
 
-🛠 Tech Stack
-Technology	Purpose
-Python	Data processing & analysis
-Streamlit	Dashboard development
-Pandas	Data manipulation
-NumPy	Numerical computations
-Plotly	Interactive visualizations
-JIRA	Project management
-📂 Project Structure
+
+------
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|------|------|
+| Python | Data processing & analysis |
+| Streamlit | Dashboard development |
+| Pandas | Data manipulation |
+| NumPy | Numerical computations |
+| Plotly | Interactive visualizations |
+| JIRA | Project management |
+
+---
+
+## 📂 Project Structure
+
+```
 digital-analytics-project
 │
 ├── app.py
@@ -276,84 +266,68 @@ digital-analytics-project
 │
 ├── requirements.txt
 └── README.md
-⚙️ Installation
+```
 
-Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/digital-analytics-project.git
+---
 
-Navigate to project folder
-
-cd digital-analytics-project
-
-Install dependencies
-
-pip install -r requirements.txt
-
-Run the Streamlit dashboard
-
-streamlit run app.py
-🔐 Login Credentials
-
+## 🔐 Login Credentials
 Default login credentials for the dashboard:
 
 Username: admin
 Password: admin123
-📈 Expected Outcome
+
+
+---
+
+## 📈 Expected Outcome
 
 This dashboard helps stakeholders:
 
-Monitor company growth
+- Monitor company growth
+- Optimize marketing performance
+- Improve website conversion
+- Analyze customer behavior
+- Support investor presentations
 
-Optimize marketing performance
+---
 
-Improve website conversion
+## 👥 Team & Contributions
 
-Analyze customer behavior
-
-Support investor presentations
-
-👥 Team & Contributions
-Abhishek Kumar Pandey — Team Lead
+### Abhishek Kumar Pandey — Team Lead
 
 Responsibilities:
 
-Project architecture design
+- Project architecture design
+- Data analysis and business insights
+- KPI framework development
+- Investor pitch deck creation
+- Strategic recommendations
+- JIRA project coordination
+- GitHub documentation
 
-Data analysis and business insights
+### Harsh
 
-KPI framework development
+Responsibilities:
 
-Investor pitch deck creation
+- Data visualization and insight presentation
+- Funnel and traffic analysis
+- Revenue trend visualization
+- Streamlit dashboard development
 
-Strategic recommendations
+### Komal Dubey
 
-JIRA project coordination
+Responsibilities:
 
-GitHub documentation
+- Data cleaning and preparation
+- Exploratory data analysis
+- Product and marketing performance analysis
+- Power BI dashboard development
 
-Harsh
+---
 
-Data visualization and insight presentation
+## 👨‍💻 Author
 
-Funnel and traffic analysis
-
-Revenue trend visualization
-
-Streamlit dashboard development
-
-Komal Dubey
-
-Data cleaning and preparation
-
-Exploratory data analysis
-
-Product and marketing performance analysis
-
-Power BI dashboard development
-
-👨‍💻 Author
-
-Abhishek Kumar Pandey
+Abhishek Kumar Pandey  
 
 Data Science & Analytics Enthusiast
