@@ -256,11 +256,6 @@ def ceo_dashboard(orders, items, refunds, products, year_range):
     total_refund    = refunds["refund_amount_usd"].sum()
     refund_rate     = (len(refunds) / total_orders * 100) if total_orders else 0
 
-    # Revenue growth (compare first half vs second half of filtered data)
-    mid_year = (year_range[0] + year_range[1]) // 2
-    rev_first  = orders[orders["year"] <= mid_year]["revenue"].sum()
-    rev_second = orders[orders["year"] >  mid_year]["revenue"].sum()
-    rev_growth = ((rev_second - rev_first) / rev_first * 100) if rev_first else 0
 
     # Conversion rate proxy (orders with 2 items vs total)
     conversion_rate = (orders["items_purchased"] == 2).mean() * 100
@@ -271,7 +266,6 @@ def ceo_dashboard(orders, items, refunds, products, year_range):
         ("🛒 Total Orders",       fmt(total_orders,    decimals=1),         None),
         ("📊 Profit Margin %",    f"{profit_margin:.1f}%",                  None),
         ("🔄 Conversion Rate",    f"{conversion_rate:.1f}%",                None),
-        ("📉 Revenue Growth %",   f"{rev_growth:.1f}%",                     rev_growth),
         ("↩️ Refund Amount",     fmt(total_refund,    prefix="$"),          None),
         ("🔁 Refund Rate",        f"{refund_rate:.1f}%",                    None),
         ("💳 Avg Order Value",    fmt(avg_order_value, prefix="$"),         None),
@@ -280,8 +274,8 @@ def ceo_dashboard(orders, items, refunds, products, year_range):
     ]
 
     # Row 1: first 6 KPIs
-    row1 = kpis[:6]
-    cols1 = st.columns(6)
+    row1 = kpis[:5]
+    cols1 = st.columns(5)
     for col, (title, value, delta) in zip(cols1, row1):
         delta_str = f"{'▲' if delta and delta > 0 else '▼'} {abs(delta):.1f}%" if delta is not None else ""
         delta_class = "kpi-delta-pos" if delta and delta > 0 else "kpi-delta-neg"
@@ -505,22 +499,19 @@ def website_dashboard(orders, items, refunds, products, year_range, sessions=Non
         thankyou_sessions= set(pageviews[pageviews["pageview_url"].str.contains("thank", na=False)]["website_session_id"])
         abandoned        = cart_sessions - thankyou_sessions
         cart_abandon     = (len(abandoned) / len(cart_sessions) * 100) if cart_sessions else 0
-        bounce_rate      = 0.0  # no single-page-view data available without full session table
     else:
         cart_abandon = 74.2
-        bounce_rate  = 62.3
 
     kpis = [
         ("🖥️ Total Sessions",        fmt(total_sessions,  decimals=2)),
         ("👥 Users",                  fmt(users,           decimals=2)),
-        ("↩️ Bounce Rate",           f"{bounce_rate:.1f}%"),
         ("🔄 Conversion Rate",        f"{conversion_rate:.2f}%"),
         ("💵 Revenue / Session",      fmt(rev_per_session, prefix="$")),
         ("🛒 Total Orders",           fmt(total_orders,    decimals=1)),
         ("💰 Total Revenue",          fmt(total_revenue,   prefix="$")),
         ("🛒 Cart Abandonment Rate",  f"{cart_abandon:.1f}%"),
     ]
-    cols = st.columns(8)
+    cols = st.columns(7)
     for col, (title, value) in zip(cols, kpis):
         col.markdown(f"""
         <div class='kpi-card'>
