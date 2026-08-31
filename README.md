@@ -18,6 +18,10 @@ Access the deployed Streamlit application:
 
 https://digital-analytix-project-bbuacqvxz9vub7rahbt7lr.streamlit.app/
 
+user_id: admin   
+password: admin123
+
+
 ---
 
 ## 🚀 Business Context
